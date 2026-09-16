@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "page-mascot": {
+      "source": "nilbuild/page-mascot",
+      "sourceType": "github",
+      "skillPath": "skills/page-mascot/SKILL.md",
+      "computedHash": "237b3d9a47a47885e5a12c72c4d6e2c4826a3f472b3be5a24146d76cfeca137b"
+    }
+  }
+}
