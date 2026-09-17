@@ -18,8 +18,8 @@ function App() {
         </div>
         <div className="mascot-stage">
           <Mascot
-            directions="./mascots/ryan-directions.png"
-            reactions="./mascots/ryan-reactions.png"
+            directions="./mascots/ryan-directions.webp"
+            reactions="./mascots/ryan-reactions.webp"
             size={280}
             label="Ryan mascot"
           />
