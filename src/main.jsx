@@ -1,9 +1,11 @@
-import React, { StrictMode } from 'react'
+import React, { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Mascot } from './Mascot.jsx'
 import '@fontsource/xanh-mono/400.css'
 import '@fontsource/xanh-mono/400-italic.css'
 import './styles.css'
+
+const Mascot3D = React.lazy(() => import('./components/3d/mascot/index.js'))
 
 function App() {
   return (
@@ -17,12 +19,23 @@ function App() {
           </p>
         </div>
         <div className="mascot-stage">
-          <Mascot
-            directions="./mascots/ryan-directions.webp"
-            reactions="./mascots/ryan-reactions.webp"
-            size={280}
-            label="Ryan mascot"
-          />
+          <Suspense
+            fallback={
+              <Mascot
+                directions="./mascots/ryan-directions.webp"
+                reactions="./mascots/ryan-reactions.webp"
+                size={280}
+                label="Ryan mascot"
+              />
+            }
+          >
+            <Mascot3D
+              directions="./mascots/ryan-directions.webp"
+              reactions="./mascots/ryan-reactions.webp"
+              size={280}
+              label="Ryan mascot"
+            />
+          </Suspense>
           <span>boop me</span>
         </div>
       </section>
